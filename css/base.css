@@ -1,0 +1,263 @@
+/* ==========================================================
+   PORTFÓLIO PESSOAL
+   ----------------------------------------------------------
+   Desenvolvido por:
+   Rhuan Pablo dos Santos Mengarelli
+
+   Arquivo:
+   base.css
+
+   Contém:
+   - Reset
+   - Variáveis
+   - Tipografia
+   - Utilitários
+   - Estrutura base
+========================================================== */
+
+/* ==========================================================
+   RESET
+========================================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================================================
+   ROOT
+========================================================== */
+
+:root {
+    /* Cores */
+
+    --color-primary: #2563eb;
+    --color-primary-hover: #1d4ed8;
+
+    --color-background: #f8fafc;
+    --color-surface: #ffffff;
+    --color-header: rgba(248, 250, 252, 0.92);
+
+    --color-text: #0f172a;
+    --color-text-light: #64748b;
+
+    --color-border: #e2e8f0;
+
+    --color-success: #16a34a;
+    --color-danger: #dc2626;
+
+    /* Tipografia */
+
+    --font-title: "Poppins", sans-serif;
+    --font-text: "Inter", sans-serif;
+
+    /* Espaçamentos */
+
+    --spacing-xs: .5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 5rem;
+    --spacing-2xl: 8rem;
+
+    /* Bordas */
+
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+
+    /* Sombras */
+
+    --shadow-sm: 0 5px 15px rgba(15, 23, 42, .05);
+
+    --shadow-md: 0 10px 30px rgba(15, 23, 42, .08);
+
+    --shadow-lg: 0 20px 45px rgba(15, 23, 42, .12);
+
+    /* Transições */
+
+    --transition: .3s ease;
+
+    /* Extras */
+
+    --profile-offset: top;
+}
+
+/* ==========================================================
+   BODY
+========================================================== */
+
+body {
+    background: var(--color-background);
+
+    color: var(--color-text);
+
+    font-family: var(--font-text);
+
+    line-height: 1.7;
+}
+
+/* ==========================================================
+   TIPOGRAFIA
+========================================================== */
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: var(--font-title);
+}
+
+h1 {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(2rem, 5vw, 2.8rem);
+}
+
+h3 {
+    font-size: 1.35rem;
+}
+
+p {
+    color: var(--color-text-light);
+}
+
+strong {
+    color: var(--color-text);
+}
+
+/* ==========================================================
+   LAYOUT BASE
+========================================================== */
+
+.container {
+    width: min(1120px, calc(100% - 2rem));
+
+    margin-inline: auto;
+}
+
+.section {
+    padding: var(--spacing-2xl) 0;
+}
+
+.section-alt {
+    background: var(--color-surface);
+}
+
+/* ==========================================================
+   SECTION TITLE
+========================================================== */
+
+.section-title {
+    margin-bottom: var(--spacing-xl);
+
+    text-align: center;
+}
+
+.section-title span {
+    display: inline-block;
+
+    margin-bottom: .75rem;
+
+    color: var(--color-primary);
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+}
+
+.section-title h2 {
+    color: var(--color-text);
+}
+
+/* ==========================================================
+   UTILITÁRIOS
+========================================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.mt-sm {
+    margin-top: var(--spacing-sm);
+}
+
+.mt-md {
+    margin-top: var(--spacing-md);
+}
+
+.mt-lg {
+    margin-top: var(--spacing-lg);
+}
+
+/* ==========================================================
+   SELEÇÃO DE TEXTO
+========================================================== */
+
+::selection {
+    background: var(--color-primary);
+
+    color: white;
+}
+
+/* ==========================================================
+   DARK THEME
+========================================================== */
+
+body.dark-theme {
+    --color-background: #0f172a;
+    --color-surface: #1e293b;
+    --color-header: rgba(15, 23, 42, 0.92);
+    --color-text: #f8fafc;
+    --color-text-light: #cbd5e1;
+    --color-border: #334155;
+}

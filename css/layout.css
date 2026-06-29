@@ -1,0 +1,275 @@
+/* ==========================================================
+   layout.css
+
+   Estrutura geral do site
+========================================================== */
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    transition:
+        background-color var(--transition),
+        box-shadow var(--transition),
+        backdrop-filter var(--transition);
+}
+
+.header.scrolled {
+    background: var(--color-header);
+
+    backdrop-filter: blur(14px);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.header .container {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    height: 80px;
+}
+
+/* ==========================================================
+   LOGO
+========================================================== */
+
+.logo {
+    font-size: 1.4rem;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    transition: color var(--transition);
+}
+
+.logo:hover {
+    color: var(--color-primary);
+}
+
+/* ==========================================================
+   NAV
+========================================================== */
+
+.nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 2rem;
+}
+
+.nav-list {
+    display: flex;
+
+    gap: 2rem;
+}
+
+.nav-list a {
+    position: relative;
+
+    font-weight: 500;
+
+    transition: color var(--transition);
+}
+
+.nav-list a:hover {
+    color: var(--color-primary);
+}
+
+/* Linha inferior */
+
+.nav-list a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: -8px;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--color-primary);
+
+    transition: width var(--transition);
+}
+
+.nav-list a:hover::after {
+
+    width: 100%;
+}
+
+.nav-list a.active {
+    color: var(--color-primary);
+}
+
+.nav-list a.active::after {
+    width: 100%;
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-top: 6rem;
+}
+
+.hero-content {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    gap: 5rem;
+
+    align-items: center;
+}
+
+/* ==========================================================
+   HERO TEXT
+========================================================== */
+
+.hero-greeting {
+
+    display: inline-block;
+
+    margin-bottom: 1rem;
+
+    color: var(--color-primary);
+
+    font-weight: 600;
+}
+
+.hero h1 {
+
+    margin-bottom: 1rem;
+}
+
+.hero h2 {
+
+    margin-bottom: 1.5rem;
+
+    font-size: 1.3rem;
+
+    font-weight: 500;
+
+    color: var(--color-text-light);
+}
+
+.hero p {
+
+    max-width: 650px;
+
+    margin-bottom: 2rem;
+}
+
+/* ==========================================================
+   HERO IMAGE
+========================================================== */
+
+.hero-image {
+
+    display: flex;
+
+    justify-content: center;
+}
+
+.hero-image img {
+
+    width: 360px;
+
+    aspect-ratio: 1;
+
+    object-fit: cover;
+
+    object-position: center var(--profile-offset);
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+
+    box-shadow:
+        0 0 0 12px rgba(37, 99, 235, .12),
+        var(--shadow-lg);
+
+    transition:
+        transform var(--transition),
+        box-shadow var(--transition);
+}
+
+.hero-image img:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 25px 50px rgba(15, 23, 42, .18);
+}
+
+/* ==========================================================
+   SECTIONS
+========================================================== */
+
+section {
+
+    scroll-margin-top: 100px;
+}
+
+/* ==========================================================
+   GRID PADRÃO
+========================================================== */
+
+.grid-2 {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 2rem;
+}
+
+.grid-3 {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2rem;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer {
+
+    padding: 2rem 0;
+
+    text-align: center;
+
+    border-top: 1px solid var(--color-border);
+
+    color: var(--color-text-light);
+}

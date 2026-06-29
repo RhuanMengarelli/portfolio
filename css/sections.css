@@ -1,0 +1,198 @@
+/* ==========================================================
+   sections.css
+
+   Estilos específicos de cada seção
+========================================================== */
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-text h1 {
+    margin-bottom: 1rem;
+}
+
+.hero-text h2 {
+    margin-bottom: 1.5rem;
+}
+
+.hero-text p {
+    margin-bottom: 2rem;
+
+    max-width: 650px;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.hero-image img {
+    position: relative;
+
+    z-index: 1;
+}
+
+/* ==========================================================
+   SOBRE
+========================================================== */
+
+.about-content {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 3rem;
+
+    align-items: center;
+}
+
+/* ==========================================================
+   FORMAÇÃO
+========================================================== */
+
+.cards-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    gap: 2rem;
+}
+
+/* ==========================================================
+   CARD DA FORMAÇÃO
+========================================================== */
+
+.education-card {
+
+    background: var(--color-surface);
+
+    padding: 2rem;
+
+    border-radius: var(--radius-md);
+
+    border: 1px solid var(--color-border);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: .3s;
+}
+
+.education-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-lg);
+}
+
+.education-card h3 {
+
+    margin-bottom: .5rem;
+}
+
+.education-card h4 {
+
+    color: var(--color-primary);
+
+    margin-bottom: 1rem;
+}
+
+/* ==========================================================
+   SKILLS
+========================================================== */
+
+.skills-list {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: .75rem;
+}
+
+.skill {
+
+    padding: .6rem 1rem;
+
+    background: rgba(37,99,235,.08);
+
+    border-radius: 999px;
+
+    color: var(--color-primary);
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.skill:hover {
+
+    background: var(--color-primary);
+
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+/* ==========================================================
+   PROJETOS
+========================================================== */
+
+.project-card {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.project-content {
+
+    flex: 1;
+}
+
+.project-links {
+
+    display: flex;
+
+    gap: 1rem;
+
+    margin-top: auto;
+}
+
+/* ==========================================================
+   CONTATO
+========================================================== */
+
+.contact {
+
+    text-align: center;
+}
+
+.contact p {
+
+    max-width: 700px;
+
+    margin: 0 auto 2rem;
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+.footer-content {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
